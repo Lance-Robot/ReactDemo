@@ -1,0 +1,25 @@
+{
+  "name": "reactdemo",
+  "version": "1.0.0",
+  "description": "init",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build":"webpack --mode production --config scripts/webpack.build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Lance-Robot@github.com/Lance-Robot/ReactDemo.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lance-Robot/ReactDemo/issues"
+  },
+  "homepage": "https://github.com/Lance-Robot/ReactDemo#readme"
+}
