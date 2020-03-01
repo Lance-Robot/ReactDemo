@@ -4,6 +4,7 @@
   "description": "init",
   "main": "index.js",
   "dependencies": {
+    "jshint": "^2.11.0",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   },
@@ -36,5 +37,4 @@
     "url": "https://github.com/Lance-Robot/ReactDemo/issues"
   },
   "homepage": "https://github.com/Lance-Robot/ReactDemo#readme"
-
 }
