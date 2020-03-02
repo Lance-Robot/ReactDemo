@@ -1,5 +1,6 @@
 body{
     color: #FFF;
+    background: url(./assets/test.png) 0 0 no-repeat;
 }
 
 ::placeholder{
