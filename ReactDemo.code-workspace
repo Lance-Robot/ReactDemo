@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "/Users/lwj/Documents/github/MyApp/my-app"
 		}
 	],
 	"settings": {
