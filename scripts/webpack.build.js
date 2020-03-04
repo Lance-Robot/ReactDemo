@@ -2,6 +2,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: {
     index: "./src/index.js"
@@ -47,13 +48,23 @@ module.exports = {
           {
             loader: "url-loader",
             options: {
-                limit: 800000,
-                name: "[name].[ext]",
-                outputPath: "images",
-                publicPath: "/images",
+              limit: 800000,
+              name: "[name].[ext]",
+              outputPath: "images",
+              publicPath: "/images"
             }
           }
         ]
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]
+          }
+        }
       }
     ]
   },
@@ -65,7 +76,13 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "css/[name].[chunkHash:5].css"
-    })
+    }),
+    new CopyPlugin([
+      {
+        from: path.resolve(process.cwd(), "src/static/"),
+        to: path.resolve(process.cwd(), "dist/images/")
+      }
+    ])
   ],
   devServer: {
     port: 3000,
